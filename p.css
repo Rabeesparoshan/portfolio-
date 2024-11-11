@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: auto;
+    
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    background-color: black;
+    color: azure;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 80px; /* Define the header height */
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+.profile-icon img {
+    width: 50px;  /* Size of the profile icon */
+    height: 50px;  /* Size of the profile icon */
+    border-radius: 50%;  /* Makes the image circular */
+    object-fit: cover;  /* Ensures the image fills the circle properly */
+    margin-right: 20px;  /* Adds space between the icon and title */
+}
+
+/* Sidebar styling */
+.dashboard-menu {
+    position: fixed;
+    top: 80px; /* Start right below the header */
+    left: -100%; /* Start off-screen */
+    width: 250px;
+    height: calc(100% - 60px); /* Full height minus the header */
+    background-color: #1e1919;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease; /* Smooth slide effect */
+    z-index: 1000; /* To appear on top of content */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dashboard-menu ul {
+    list-style: none;
+    
+}
+.dashboard-menu > a {
+   text-decoration: none;
+}
+
+.dashboard-menu li {
+    padding: 20px 0;
+    cursor: pointer;
+    color: white;
+
+}
+
+.dashboard-menu li:hover {
+    background-color: #555; 
+    
+}
+
+/* Active state for when the menu is shown */
+.dashboard-menu.active {
+    left: 0;
+}
+.text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; 
+    color:azure;
+    margin-top: 100px;
+    padding-right: 450px;
+}
+
+.para{
+    padding-right: 95px;
+    padding-bottom: 33px;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    text-align: justify;
+    text-indent: 20px;
+    width: 100%;
+    padding-left: 358px;
+    padding-top: 15px;
+}
+.facebook-icon {
+    font-size: 25px;  /* Adjusts the size of the icon */
+    color: #e8ebf0;   /* Facebook's blue color */
+    text-decoration: none;  /* Adds transition effect for color change */
+    border-radius: 80%;
+    /* border: solid white 3px;
+    text-align: center; */
+    
+    
+   
+}
+.fb-container {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: solid white 3px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+     transition: color 0.3s ease;
+    
+    a{
+        color: #e8ebf0;
+    }
+
+}
+.a:hover > .facebook-icon, .a:hover {
+    color: #3b5998; 
+    border-color: #3b5998; 
+}
+.b:hover > .ln-icon, .b:hover {
+    color: #526a9e; 
+    border-color: #526a9e; 
+}
+.c:hover > .ins-icon, .c:hover {
+    color:darkmagenta; 
+    border-color:darkmagenta;
+}
+.d:hover > .whatsapp-icon, .d:hover {
+    color: #269a20; 
+    border-color: #269a20; 
+}
+.e:hover > .github-icon, .e:hover {
+    color: #2e2f30; 
+    border-color: #2e2f30; 
+}
+.icons{
+    display: flex;
+    gap: 25px;
+    padding-left:358px;
+}
+@media (max-width: 1024px) {
+    .header-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .profile-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .text, .para, .icons {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .dashboard-menu {
+        width: 200px;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .header-bar {
+        padding: 15px;
+    }
+
+    .profile-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-top: 50px;
+    }
+
+    .para {
+        padding: 0 15px;
+        font-size: 1rem;
+        text-indent: 15px;
+    }
+
+    .icons {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        gap: 15px;
+    }
+
+    .dashboard-menu {
+        width: 100%;
+        height: calc(100% - 60px);
+    }
+}
